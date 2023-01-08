@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
-import { LandingPageComponent } from './module/landing-page/landing-page/landing-page.component';
-import { ModuleTsComponent } from './molule/module.ts/module.ts.component';
+import { LandingPageModule } from './modules/landing-page/landing-page.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LandingPageComponent,
-    ModuleTsComponent
-  ],
-  imports: [
-    BrowserModule
-    
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        LandingPageModule,
+        BrowserAnimationsModule
+        
+    ]
 })
 export class AppModule { }
